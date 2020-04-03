@@ -1,7 +1,6 @@
 import React,{useEffect} from 'react'
-import {getModelInfo} from '../Utils'
+import {URL_MODEL_INFO} from '../Utils'
 import axios from "axios";
-
 
 function ModelInfo(){
 	
@@ -11,7 +10,7 @@ function ModelInfo(){
 	useEffect(() => {
 	  
 	const fetchData = async () => {
-      const resultModelInfo = await axios.get('http://localhost:5000/model')
+      const resultModelInfo = await axios.get(URL_MODEL_INFO)
       							.then(({data}) => 
       									{ console.log(data) 
       									  setLoss(parseFloat(data.loss))

@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import {Form,Button} from 'react-bootstrap'
 import axios from 'axios'
+import {URL_FILE_ANALYSE} from '../Utils'
 
 function Analyse(){
 	const [answer,setAnswer] = React.useState(undefined)
@@ -14,7 +15,7 @@ function Analyse(){
 			const myFormData = new FormData();
 			myFormData.append("file", arquivo);
 			
-			await axios.post('http://localhost:5000/analyse',myFormData)
+			await axios.post(URL_FILE_ANALYSE,myFormData)
 				.then((response) => {
 		    		var dado = { status:response.status,mensagem:response.data}
 		    		setAnswer(dado.mensagem.answer)
