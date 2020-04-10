@@ -1,6 +1,4 @@
-import axios from "axios";
-
-//export const BACK_END_URL = "http://localhost:5000";
+//export const BACK_END_URL = "http://localhost:8080";
 export const BACK_END_URL = "http://150.165.15.44:8080";
 export const ROUTE_MODEL = "model";
 export const ROUTE_ANALYSE = "analyse";
